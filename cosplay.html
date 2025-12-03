@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COSPLAY | Sugar Light</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+<style>
+  :root{--purple:#2d1b69;--light:#f8f5ff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#fff;font-family:'Segoe UI',sans-serif;color:var(--purple);padding-top:90px;background:var(--light);}
+  
+  /* Nav cố định */
+  header{position:fixed;top:0;left:0;right:0;background:#fff;padding:25px 60px;text-align:right;box-shadow:0 2px 20px rgba(45,27,105,.1);z-index:999;}
+  nav a{color:var(--purple);text-decoration:none;margin-left:40px;font-weight:600;transition:.3s;}
+  nav a:hover{opacity:0.6;}
+
+  /* 2 Tab */
+  .tabs{
+    text-align:center;padding:40px 20px;background:var(--light);position:sticky;top:90px;z-index:998;
+  }
+  .tab{
+    display:inline-block;padding:15px 50px;margin:0 10px;font-size:1.4rem;font-weight:700;
+    border-radius:50px;cursor:pointer;transition:.4s;background:rgba(45,27,105,0.1);
+  }
+  .tab.active{background:var(--purple);color:#fff;}
+  .tab:hover:not(.active){background:rgba(45,27,105,0.2);}
+
+  /* Gallery Pinterest style */
+  .gallery{
+    column-count:4;column-gap:20px;padding:40px 30px;max-width:1800px;margin:auto;
+  }
+  .item{
+    break-inside:avoid;margin-bottom:20px;overflow:hidden;border-radius:16px;
+    box-shadow:0 10px 30px rgba(45,27,105,.15);transition:.4s;
+  }
+  .item:hover{
+    transform:translateY(-8px);box-shadow:0 20px 50px rgba(45,27,105,.25);
+  }
+  .item img{
+    width:100%;height:auto;display:block;border-radius:16px;transition:.4s;
+  }
+  .item:hover img{transform:scale(1.05);}
+
+  @media(max-width:1200px){.gallery{column-count:3;}}
+  @media(max-width:768px){.gallery{column-count:2;padding:20px;}}
+  @media(max-width:480px){.gallery{column-count:1;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">MAIN</a>
+    <a href="about-me.html">ABOUT ME</a>
+    <a href="samples.html">SAMPLES</a>
+    <a href="pricing.html">PRICING</a>
+    <a href="rules.html">RULES</a>
+  </nav>
+</header>
+
+<div class="tabs">
+  <div class="tab active">COSPLAY</div>
+  <div class="tab" onclick="location.href='doithuong.html'">ĐỜI THƯỜNG</div>
+</div>
+
+<div class="gallery">
+  <!-- Thay hết src bên dưới bằng ảnh cosplay thật của mày -->
+  <div class="item"><a href="https://i.imgur.com/abc1.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc1.jpg" alt=""></a></div>
+  <div class="item"><a href="https://i.imgur.com/abc2.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc2.jpg" alt=""></a></div>
+  <div class="item"><a href="https://i.imgur.com/abc3.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc3.jpg" alt=""></a></div>
+  <div class="item"><a href="https://i.imgur.com/abc4.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc4.jpg" alt=""></a></div>
+  <div class="item"><a href="https://i.imgur.com/abc5.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc5.jpg" alt=""></a></div>
+  <div class="item"><a href="https://i.imgur.com/abc6.jpg" data-lightbox="cosplay"><img src="https://i.imgur.com/abc6.jpg" alt=""></a></div>
+  <!-- Thêm thoải mái, càng nhiều càng đẹp -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>lightbox.option({resizeDuration:200,wrapAround:true,disableScrolling:true})</script>
+</body>
+</html>
