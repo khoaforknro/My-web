@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugar Light | Portfolio</title>
+  <style>
+    :root {
+      --purple: #2d1b69;
+      --light-purple: #5d4a9e;
+      --white: #ffffff;
+      --gray: #f8f9fa;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: var(--white);
+      color: var(--purple);
+      line-height: 1.6;
+    }
+
+    /* Header + Nav */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 999;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+    }
+    nav a {
+      color: var(--purple);
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--light-purple);
+      text-shadow: 0 0 10px rgba(93,74,158,0.4);
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: var(--white);
+    }
+    .hero h1 {
+      font-family: 'Dancing Script', cursive; /* hoặc font viết tay mày thích */
+      font-size: clamp(5rem, 15vw, 12rem);
+      color: var(--purple);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      color: var(--light-purple);
+      margin-bottom: 30px;
+    }
+    .hero img {
+      max-width: 90%;
+      height: auto;
+      margin-top: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(45,27,105,0.2);
+    }
+
+    /* Content Section - tím đậm */
+    .content {
+      background: var(--purple);
+      color: var(--white);
+      padding: 120px 10% 100px;
+      text-align: center;
+    }
+    .content h2 {
+      font-size: 6rem;
+      font-weight: 900;
+      margin-bottom: 80px;
+      letter-spacing: 5px;
+    }
+    .content-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .menu-list {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1.4rem;
+      line-height: 2.4;
+    }
+    .menu-list span {
+      display: inline-block;
+      width: 50px;
+      font-weight: bold;
+    }
+    .menu-list a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+    .menu-list a:hover {
+      border-bottom: 2px solid var(--white);
+    }
+
+    /* Footer tím đậm */
+    footer {
+      background: var(--purple);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 60px 20px 40px;
+      font-size: 1.1rem;
+    }
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 15px 20px; }
+      nav a { margin-left: 20px; font-size: 1rem; }
+      .content h2 { font-size: 4rem; }
+      .menu-list { font-size: 1.2rem; text-align: center; }
+      .menu-list span { display: block; margin-bottom: 10px; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#main">MAIN</a>
+    <a href="about-me.html">ABOUT ME</a>
+    <a href="samples.html">SAMPLES</a>
+    <a href="pricing.html">PRICING</a>
+    <a href="rules.html">RULES</a>
+  </nav>
+</header>
+
+<section class="hero" id="main">
+  <h1>Sugar Light</h1>
+  <p>Portfolio</p>
+  <!-- Thay bằng ảnh chính của mày nha! -->
+  <img src="https://i.imgur.com/6d1fK5E.jpg" alt="Sugar Light">
+</section>
+
+<section class="content">
+  <h2>CONTENT</h2>
+  <img src="https://i.imgur.com/9kP3rYf.jpg" alt="Preview" class="content-img">
+  <div class="menu-list">
+    <div><span>01</span> <a href="#main">MAIN</a></div>
+    <div><span>02</span> <a href="about-me.html">ABOUT ME</a></div>
+    <div><span>03</span> <a href="samples.html">PHOTOS</a></div>
+    <div><span>04</span> <a href="samples-cosplay.html">COSPLAY</a></div>
+    <div><span>05</span> <a href="samples-kyyeu.html">KỶ YẾU</a></div>
+    <div><span>06</span> <a href="samples-portrait.html">PORTRAIT</a></div>
+    <div><span>07</span> <a href="samples-wedding.html">WEDDING</a></div>
+    <div><span>08</span> <a href="samples-event.html">EVENT</a></div>
+    <div><span>09</span> <a href="videos.html">VIDEOS</a></div>
+    <div><span>10</span> <a href="pricing.html">BẢNG GIÁ</a></div>
+    <div><span>11</span> <a href="rules.html">RULES</a></div>
+  </div>
+</section>
+
+<footer>
+  <p>Sugar Light  Đường hôm qua  Photography  Videography</p>
+  <br>
+  <div>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+  </div>
+</footer>
+
+</body>
+</html>
