@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GALLERY |Ke Sugar</title>
+<style>
+  :root{--purple:#2d1b69;--light:#f8f7ff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#fff;font-family:'Segoe UI',sans-serif;padding-top:90px;}
+
+  /* Nav cố định */
+  header{
+    position:fixed;top:0;left:0;right:0;background:#fff;padding:30px 60px;
+    text-align:right;box-shadow:0 2px 20px rgba(45,27,105,.08);z-index:999;
+  }
+  nav a{color:var(--purple);text-decoration:none;margin-left:45px;font-weight:600;transition:.3s;}
+  nav a:hover{opacity:0.6;}
+
+  /* Tab */
+  .tabs{
+    text-align:center;padding:60px 20px 40px;background:var(--light);position:sticky;top:90px;z-index:998;
+  }
+  .tab{
+    display:inline-block;padding:16px 40px;margin:8px;border-radius:50px;font-weight:700;
+    font-size:1.3rem;cursor:pointer;transition:.4s;background:rgba(45,27,105,0.12);color:var(--purple);
+  }
+  .tab.active{background:var(--purple);color:#fff;}
+  .tab:hover:not(.active){background:rgba(45,27,105,0.22);}
+
+  /* Gallery – ảnh vuông, dính sát 100%, không bo góc, nhỏ hơn gốc */
+  .gallery{
+    column-count:5;column-gap:0;padding:0 20px 100px;max-width:1920px;margin:auto;display:none;
+  }
+  .gallery.active{display:block;}
+  .gallery img{
+    width:100%;height:auto;display:block;
+    margin:0 0 0 0 !important; /* không khoảng cách */
+    image-rendering:-webkit-optimize-contrast; /* sắc nét hơn */
+    pointer-events:none; /* không click được */
+  }
+
+  /* Responsive */
+  @media(max-width:1400px){.gallery{column-count:4;}}
+  @media(max-width:1000px){.gallery{column-count:3;}}
+  @media(max-width:768px){.gallery{column-count:2;padding:0 10px;}}
+  @media(max-width:480px){.gallery{column-count:1;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">MAIN</a>
+    <a href="about-me.html">ABOUT ME</a>
+    <a href="samples.html">SAMPLES</a>
+    <a href="pricing.html">PRICING</a>
+    <a href="rules.html">RULES</a>
+  </nav>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="show('cosplay')">COSPLAY</div>
+  <div class="tab" onclick="show('kyyeu')">KỶ YẾU</div>
+  <div class="tab" onclick="show('portrait')">PORTRAIT</div>
+  <div class="tab" onclick="show('wedding')">WEDDING</div>
+  <div class="tab" onclick="show('event')">EVENT</div>
+  <div class="tab" onclick="show('video')">VIDEO</div>
+</div>
+
+<!-- COSPLAY -->
+<div id="cosplay" class="gallery active">
+  <img src="https://i.imgur.com/abc1.jpg" alt="">
+  <img src="https://i.imgur.com/abc2.jpg" alt="">
+  <!-- thêm ảnh cosplay -->
+</div>
+
+<!-- KỶ YẾU -->
+<div id="kyyeu" class="gallery">
+  <img src="https://i.imgur.com/ky1.jpg" alt="">
+</div>
+
+<!-- PORTRAIT -->
+<div id="portrait" class="gallery">
+  <img src="https://i.imgur.com/port1.jpg" alt="">
+</div>
+
+<!-- WEDDING -->
+<div id="wedding" class="gallery">
+  <img src="https://i.imgur.com/wed1.jpg" alt="">
+</div>
+
+<!-- EVENT -->
+<div id="event" class="gallery">
+  <img src="https://i.imgur.com/event1.jpg" alt="">
+</div>
+
+<!-- VIDEO -->
+<div id="video" class="gallery">
+  <img src="https://i.imgur.com/vid1.jpg" alt="">
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.gallery').forEach(g => g.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.remove('active');
+    if (['cosplay','kyyeu','portrait','wedding','event','video'][i] === id) t.classList.add('active');
+  });
+}
+</script>
+
+</body>
+</html>
